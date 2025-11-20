@@ -1,0 +1,13 @@
+<div class="column is-one-quarter">
+    <p><%=product.product_name%></p>
+    <% if product.image.present? %>
+        <div class="card-image">
+            <figure class="image is-4by4">
+                <%= image_tag product.image%>
+            </figure>
+        </div>
+    <%end%>
+
+    <p><strong>Description: </strong><%=product.description%></p>
+    <p><strong>Price: </strong><%=product.price%></p>
+</div>
