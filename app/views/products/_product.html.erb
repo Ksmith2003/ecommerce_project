@@ -1,5 +1,6 @@
 <div class="column is-one-quarter">
     <p><%=product.product_name%></p>
+    <p><sub><%=product.category_name%></sub></p>
     <% if product.image.present? %>
         <div class="card-image">
             <figure class="image is-4by4">
@@ -9,5 +10,5 @@
     <%end%>
 
     <p><strong>Description: </strong><%=product.description%></p>
-    <p><strong>Price: </strong><%=product.price%></p>
+    <p><strong>Price: </strong>$<%=product.price%></p>
 </div>
