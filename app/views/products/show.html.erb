@@ -1,0 +1,2 @@
+<% content_for(:html_title) { @product.product_name } %>
+<%= render partial: "product", object: @product, locals: { is_link: false } %>

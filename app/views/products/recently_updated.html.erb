@@ -1,0 +1,10 @@
+<h1 class="title is-1">Recently Updated Products</h1>
+
+<div id="Products" class="fixed-grid has-3-cols">
+  <% @products.each do |product| %>
+    <%= render product %>
+  <% end %>
+    <div class="ml-5 mr-5">
+        <%= paginate @products %>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 <div class="column is-one-quarter">
-    <p><%=product.product_name%></p>
+    <p><%= link_to product.product_name, product %></p>
     <p><sub><%=product.category_name%></sub></p>
     <% if product.image.present? %>
         <div class="card-image">

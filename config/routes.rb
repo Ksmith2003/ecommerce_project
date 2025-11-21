@@ -13,8 +13,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get "/products", to: "products#index"
+  get "/", to: "products#index"
+  resources :products
   get "/products/:id", to: "products#show"
-  get "/products/updated", to: "customers#recently_updated"
-  get "/customers/new", to: "customers#new"
+  get "/recently_updated", to: "products#recently_updated"
+  get "/new_products", to: "products#new_products"
 end
