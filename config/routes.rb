@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   get "/products/:id", to: "products#show"
   get "/recently_updated", to: "products#recently_updated"
   get "/new_products", to: "products#new_products"
+  resources :categories
 end
