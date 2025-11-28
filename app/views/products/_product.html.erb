@@ -13,6 +13,11 @@
 
             <p><strong>Description: </strong><%=product.description%></p>
             <p><strong>Price: </strong>$<%=product.price%></p>
+            
+            <%= form_with url: cart_add_path, method: :post do %>
+                <%= hidden_field_tag(:product_id, product.id, autocomplete: "off") %>
+                <%= button_tag "Add to Cart" %>
+            <% end %>
         </div>
     </div>
 </div>
