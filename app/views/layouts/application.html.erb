@@ -26,6 +26,14 @@
 
   <body>
     <%= render "common/navigation" %>
+    <main>
+      <ul>
+        <% cart.each do |product| %>
+          <li><%= product.product_name %></li>
+        <% end %>
+      </ul>
+      <%= yield %>
+    </main>
     <%= breadcrumbs separator: " &rsaquo; " %>
     <%= yield %>
   </body>

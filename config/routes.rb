@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -19,6 +20,8 @@ Rails.application.routes.draw do
   get "/recently_updated", to: "products#recently_updated"
   get "/new_products", to: "products#new_products"
   resources :categories
+  post "cart", to: "cart#add", as: "cart_add"
+  delete "cart", to: "cart#destroy", as: "cart_destroy"
   resources :pages, except: [ :show ]
   get "pages/:permalink" => "pages#permalink", as: "page_permalink"
 end
