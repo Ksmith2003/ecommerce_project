@@ -1,5 +1,5 @@
 <h1 class="title is-1">New Products</h1>
-
+<% breadcrumb :new_products, @new_products %>
 <div id="Products" class="fixed-grid has-3-cols">
   <% @products.each do |product| %>
     <%= render product %>
