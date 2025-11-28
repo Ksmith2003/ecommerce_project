@@ -3,6 +3,8 @@
         <li><%= link_to "All Products", products_path, class: "navbar-item"  %></li>
         <li><%= link_to "New Arrivals", new_products_path, class: "navbar-item"  %></li>
         <li><%= link_to "Recently Updated", recently_updated_path, class: "navbar-item"  %></li>
-        
+        <% cms_pages.each do |page| %>
+            <li><%= link_to page.title, page_permalink_path(permalink: page.permalink), class: "navbar-item"  %></li>
+        <% end %>
     </ul>
 </nav>
