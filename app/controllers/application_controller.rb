@@ -16,5 +16,11 @@ class ApplicationController < ActionController::Base
 
   def cart
     Product.find(session[:cart])
+  helper_method :cms_pages
+
+  private
+
+  def cms_pages
+    Page.all
   end
 end

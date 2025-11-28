@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_11_14_211014) do
+ActiveRecord::Schema[8.1].define(version: 2025_11_28_060155) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.integer "author_id"
     t.string "author_type"
@@ -69,6 +69,14 @@ ActiveRecord::Schema[8.1].define(version: 2025_11_14_211014) do
     t.string "category_name"
     t.datetime "created_at", null: false
     t.string "description"
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.string "permalink"
+    t.string "title"
     t.datetime "updated_at", null: false
   end
 

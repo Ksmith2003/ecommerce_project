@@ -70,3 +70,5 @@ gem "devise"
 gem "rubocop"
 gem "sass-rails"
 gem "kaminari"
+
+gem "gretel"

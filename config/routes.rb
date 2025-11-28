@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   resources :categories
   post "cart", to: "cart#add", as: "cart_add"
   delete "cart", to: "cart#destroy", as: "cart_destroy"
+  resources :pages, except: [ :show ]
+  get "pages/:permalink" => "pages#permalink", as: "page_permalink"
 end
