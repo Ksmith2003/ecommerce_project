@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :initialize_session
 
   helper_method :cart
+  helper_method :cms_pages
   # Changes to the importmap will invalidate the etag for HTML responses
   stale_when_importmap_changes
 
@@ -16,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def cart
     Product.find(session[:cart])
-  helper_method :cms_pages
+  end
 
   private
 
