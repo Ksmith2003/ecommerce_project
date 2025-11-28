@@ -1,14 +1,18 @@
-<div class="column is-one-quarter">
-    <p><%= link_to product.product_name, product %></p>
-    <p><sub><%=product.category_name%></sub></p>
-    <% if product.image.present? %>
-        <div class="card-image">
-            <figure class="image is-4by4">
-                <%= image_tag product.image%>
-            </figure>
-        </div>
-    <%end%>
+<div class="fixed-grid has-3-cols">
+    <div class="column is-one-third">
+        <div class="card product">
+            <p><%= link_to product.product_name, product %></p>
+            <p><sub><%= link_to product.category.category_name, product.category %></sub></p>
+            <% if product.image.present? %>
+                <div class="card-image">
+                    <figure class="image is-4by4">
+                        <%= image_tag product.image%>
+                    </figure>
+                </div>
+            <%end%>
 
-    <p><strong>Description: </strong><%=product.description%></p>
-    <p><strong>Price: </strong>$<%=product.price%></p>
+            <p><strong>Description: </strong><%=product.description%></p>
+            <p><strong>Price: </strong>$<%=product.price%></p>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,9 @@
+<% content_for(:html_title) { @category.category_name } %>
+<h1 class="title is-1"><%= @category.category_name %></h1>
+<p><%=@category.description%></p>
+
+<ul>
+    <% @category.products.each do |product| %>
+        <%= render product %>
+    <% end %>
+</ul>
