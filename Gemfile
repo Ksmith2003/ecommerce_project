@@ -72,3 +72,5 @@ gem "sass-rails"
 gem "kaminari"
 
 gem "gretel"
+
+gem "ransack"
