@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
+  # def index
+  #   @products = Product.includes(:category).page params[:page]
+  # end
+
   def index
-    @products = Product.includes(:category).page params[:page]
+    @q = Product.includes(:category).ransack(params[:q])
+    @products  = @q.result.page(params[:page])
   end
 
   def show
