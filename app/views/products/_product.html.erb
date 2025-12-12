@@ -6,7 +6,7 @@
             <% if product.image.present? %>
                 <div class="card-image">
                     <figure class="image is-4by4">
-                        <%= image_tag product.image%>
+                        <%= image_tag product.image, alt: "#{product.product_name} image"%>
                     </figure>
                 </div>
             <%end%>
